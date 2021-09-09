@@ -41,19 +41,19 @@ class Calculos
 
     public function __toString()
     {if ($this->valor === '+'){
-        return "El resultado de {$this->numeroUno } + {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        return "El resultado de {$this->numeroUno } + {$this->numeroDos } es : {$this->calculaOperacion()}";
         
        }    else if ($this->valor === '-'){
 
-        return "El resultado de {$this->numeroUno } - {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        return "El resultado de {$this->numeroUno } - {$this->numeroDos } es : {$this->calculaOperacion()}";
         
        } else if  ($this->valor === '*'){
 
-        return "El resultado de {$this->numeroUno } * {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        return "El resultado de {$this->numeroUno } * {$this->numeroDos } es : {$this->calculaOperacion()}";
         
        } else if  ($this->valor === '/'){
 
-        return "El resultado de {$this->numeroUno } / {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        return "El resultado de {$this->numeroUno } / {$this->numeroDos } es : {$this->calculaOperacion()}";
         
        }
         

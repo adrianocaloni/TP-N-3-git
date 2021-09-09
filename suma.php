@@ -10,6 +10,4 @@ class suma extends Calculos {
 
     }
     
-
-
 }
