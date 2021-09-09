@@ -1,28 +1,15 @@
 <?php
 
-class suma {
+require_once 'numeros.php';
 
-    
-    protected $numeroUno;
-    protected $numeroDos;
- 
+class suma extends Calculos {
 
-    public function __construct($numeroUno, $numeroDos){
-        $this->numeroUno = $numeroUno;
-        $this->numeroDos = $numeroDos;
- 
-        
+    public function __construct($numeroUno, $numeroDos,$valor)
+ {
+    parent::__construct($numeroUno,$numeroDos,$valor);
+
     }
     
-    public function sumaNumeros(){
-      
-        return  ( $this-> numeroUno +   $this-> numeroDos);
-       
-    }
 
-    public function __toString()
-    {
-        return "La suma de los numeros es {$this->sumaNumeros()}.";
-    }
 
 }

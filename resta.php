@@ -2,14 +2,14 @@
 
 class resta {
 
-    
     protected $numeroUno;
     protected $numeroDos;
- 
+    protected $valor;
 
-    public function __construct($numeroUno, $numeroDos){
+    public function __construct($numeroUno, $numeroDos,$valor){
         $this->numeroUno = $numeroUno;
         $this->numeroDos = $numeroDos;
+        $this->valor = $valor; 
        
     }
     
