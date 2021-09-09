@@ -1,12 +1,10 @@
 <?php
 
-
 class Calculos
 {
     protected $numeroUno;
     protected $numeroDos;
     protected $valor;
-
 
     public function __construct($numeroUno, $numeroDos, $valor)
     {
@@ -16,7 +14,6 @@ class Calculos
 
     }
 
-    
     public function getNumeros() 
     {
         return $this->numeroUno . " " . $this->numeroDos;
@@ -35,11 +32,30 @@ class Calculos
 
         return  ( $this-> numeroUno *  $this-> numeroDos);
         
+       } else if  ($this->valor === '/'){
+
+        return  ( $this-> numeroUno /  $this-> numeroDos);
+        
        }
     }
 
     public function __toString()
-    {
-        return "La suma de los numeros es {$this->calculaOperacion()}.";
+    {if ($this->valor === '+'){
+        return "El resultado de {$this->numeroUno } + {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        
+       }    else if ($this->valor === '-'){
+
+        return "El resultado de {$this->numeroUno } - {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        
+       } else if  ($this->valor === '*'){
+
+        return "El resultado de {$this->numeroUno } * {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        
+       } else if  ($this->valor === '/'){
+
+        return "El resultado de {$this->numeroUno } / {$this->numeroDos } es : {$this->calculaOperacion()}.";
+        
+       }
+        
     }
 }
