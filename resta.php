@@ -1,26 +1,14 @@
 <?php
 
-class resta {
+require_once 'numeros.php';
 
-    protected $numeroUno;
-    protected $numeroDos;
-    protected $valor;
+class resta extends Calculos {
 
-    public function __construct($numeroUno, $numeroDos,$valor){
-        $this->numeroUno = $numeroUno;
-        $this->numeroDos = $numeroDos;
-        $this->valor = $valor; 
-       
+    public function __construct($numeroUno, $numeroDos,$valor)
+ {
+    parent::__construct($numeroUno,$numeroDos,$valor);
+
     }
     
-    public function resta (){
-        return $this-> numeroUno  -  $this->numeroDos;
-    }
-
-    public function __toString()
-    {
-        return "La Resta de los numeros es {$this->resta()}.";
-    }
-
 
 }

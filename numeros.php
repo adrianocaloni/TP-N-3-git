@@ -25,7 +25,15 @@ class Calculos
     public function calculaOperacion()
     {
        if ($this->valor === '+'){
-        return  ( $this-> numeroUno +   $this-> numeroDos);
+        return  ( $this-> numeroUno +  $this-> numeroDos);
+        
+       }    else if ($this->valor === '-'){
+
+        return  ( $this-> numeroUno  -  $this-> numeroDos);
+        
+       } else if  ($this->valor === '*'){
+
+        return  ( $this-> numeroUno *  $this-> numeroDos);
         
        }
     }
