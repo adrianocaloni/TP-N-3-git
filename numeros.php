@@ -21,22 +21,26 @@ class Calculos
 
     public function calculaOperacion()
     {
-       if ($this->valor === '+'){
-        return  ( $this-> numeroUno +  $this-> numeroDos);
         
-       }    else if ($this->valor === '-'){
+            switch ($this->valor)  { 
+                case '+':
+                    return $this-> numeroUno +  $this-> numeroDos;
+                    break;
+                case '-':
+                    return $this-> numeroUno  -  $this-> numeroDos;
+                    break;
+                case '*':
+                    return $this-> numeroUno *  $this-> numeroDos; 
+                    break;
+                case '/':
+                    if ( $this-> numeroUno === 0  ||  $this-> numeroDos === 0){ 
+                        return "No se puede dividir por cero";
+                    } else {
+                        return $this-> numeroUno /  $this-> numeroDos;
+                    }
+                    break;
+            }
 
-        return  ( $this-> numeroUno  -  $this-> numeroDos);
-        
-       } else if  ($this->valor === '*'){
-
-        return  ( $this-> numeroUno *  $this-> numeroDos);
-        
-       } else if  ($this->valor === '/'){
-
-        return  ( $this-> numeroUno /  $this-> numeroDos);
-        
-       }
     }
 
     public function __toString()
